@@ -1,18 +1,56 @@
 import React, { PropTypes } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import FlatButton from 'material-ui/FlatButton';
-let Options = (props) => {
-  console.log(props)
+import RaisedButton from 'material-ui/RaisedButton';
+
+let styles = {
+  "backgroundColor": "#1D1E39",
+  "labelColor": "#F5F5F5",
+  "labelStyle": {
+    "textTransform": "none"
+  },
+  "buttonStyle": {
+    "boxShadow": "box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+    "borderRadius": "0px"
+  },
+  "container": {
+    "width": "100%",
+    "flex": "0 1 auto",
+    "paddingBottom": "75px",
+    "paddingTop": "0px",
+    "marginTop": "-3px"
+  },
+  "table": {
+    "width": "100%",
+    "paddingTop": "0px"
+  }
+}
+let Options = () => {
   return (
-    <div>
-      <table>
+    <div style={styles.container}>
+      <table style={styles.table}>
       <thead>
         <tr>
           <td>
-            <FlatButton label="Companies" primary={true} />
+              <RaisedButton
+                label="Companies"
+                labelPosition="after"
+                containerElement="label"
+                backgroundColor={styles.backgroundColor}
+                labelColor={styles.labelColor}
+                labelStyle={styles.labelStyle}
+                buttonStyle={styles.buttonStyle}
+                fullWidth={true} />
           </td>
           <td>
-            <FlatButton label="Job Roles" primary={true} />
+              <RaisedButton
+                label="Job Roles"
+                labelPosition="after"
+                containerElement="label"
+                backgroundColor={styles.backgroundColor}
+                labelColor={styles.labelColor}
+                labelStyle={styles.labelStyle}
+                buttonStyle={styles.buttonStyle}
+                fullWidth={true}/>
           </td>
           </tr>
         </thead>
@@ -22,4 +60,4 @@ let Options = (props) => {
 
 };
 
-export default muiThemeable()(Options);
+export default Options;

@@ -30,7 +30,7 @@ let initialState = {
       position: "COO & Co-Founder",
       reviews: undefined,
       rating: undefined,
-      about: "'ve been in sales/account management at Forrester for more than five years. I manage emerging ...",
+      about: "I've been in sales/account management at Forrester for more than five years. I manage emerging ...",
       available: {
         fee: "$5",
         time: "30 min"
