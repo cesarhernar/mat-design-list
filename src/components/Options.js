@@ -10,20 +10,23 @@ let styles = {
   },
   "buttonStyle": {
     "boxShadow": "box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-    "borderRadius": "0px"
+    "borderRadius": "0px",
+    "borderBottom": "2px solid #37C99E"
   },
   "container": {
     "width": "100%",
-    "flex": "0 1 auto",
-    "paddingBottom": "75px",
+    "flex": "1 1 auto",
+    "paddingBottom": "60px",
     "paddingTop": "0px",
-    "marginTop": "-3px"
+    "marginTop": "-3px",
+ 
   },
   "table": {
     "width": "100%",
-    "paddingTop": "0px"
+    "paddingTop": "0px",
   }
 }
+
 let Options = () => {
   return (
     <div style={styles.container}>

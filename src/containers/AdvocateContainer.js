@@ -3,6 +3,8 @@ import React from 'react';
 import Options from './../components/Options';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Advocates from './Advocates';
+import RaisedButton from 'material-ui/RaisedButton';
+import Bottom from './../components/Bottom';
 let styling = {
   "advocatesStyling": {
     "position": "absolute",
@@ -13,7 +15,7 @@ let styling = {
     "color": "#FAFAFA",
     "felx": "0 1 auto",
     "width": "96%",
-    "fontFamily": "Roboto, sans-serif",
+    "fontFamily": "Lato, sans-serif",
     "paddingTop": "60px",
     "paddingRight": "15px",
     "paddingBottom": "50px",
@@ -38,6 +40,7 @@ let AdvocateContainer = ({advocates, totalAdvocates}) => {
         <Options totalAdvocates={totalAdvocates} />
         < Advocates advocates={advocates} />
         <div style={styling.advocatesStyling}> {totalAdvocates + " Advocates Found"} </div>
+        <Bottom />
         </div>
       </MuiThemeProvider>
     </div>
