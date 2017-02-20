@@ -61,18 +61,24 @@ let style = {
   }
 };
 
+
+
 let People = ({advocate}) => {
   let stars = [];
   let wholeRating = advocate.rating ? Math.floor(advocate.rating) : 0;
-  for (let i = 0; i < wholeRating; i++) { 
+  for (let i = 0; i < wholeRating; i++) {
     stars.push(<ActionGrade style={style.star} color="rgb(252, 199, 36)"/>)
   }
   if (wholeRating) {
     advocate.rating - wholeRating > 0 ? stars.push(<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" ><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" stroke="rgb(252, 199, 36)" fill="rgb(252, 199, 36)"/></svg>) : null;
   }
+  let bio = advocate.aboutFirstHalf
+  if (advocate.aboutFirstHalf) {
+    bio += advocate.showFullBio ? advocate.aboutSecondHalf : "...";
+  }
   return (
     <div className="advocate">
-      <table style={style.container}>
+      <table style={style.container} >
         <tbody style={style.container}>
           <tr style={style.rows}>
             <td>
@@ -107,9 +113,10 @@ let People = ({advocate}) => {
         <tfoot style={style.container}>
           <tr style={style.rows}>
             <td style={style.columns}>
-              <div style={{ "textAlign": "justify", "cursor": "default" }}>{advocate.about ? advocate.about : ""} {advocate.about ? <a href="" style={style.reviewNum}>{"Read More"}</a> : ""} </div>
+              <div style={{ "cursor": "default", "heigth": "auto", "transition": "height 10s"}}>{bio}</div>
               <br/>
-              <div><RaisedButton
+              <div>
+                <RaisedButton
                 label="Book Now"
                 fullWidth={true}
                 backgroundColor={style.button.backgroundColor}

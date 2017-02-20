@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Advocates from './Advocates';
 import RaisedButton from 'material-ui/RaisedButton';
 import Bottom from './../components/Bottom';
+import * as actions from './../actions/actions';
 let styling = {
   "advocatesStyling": {
     "position": "absolute",
@@ -32,13 +33,13 @@ let styling = {
   }
 }
 
-let AdvocateContainer = ({advocates, totalAdvocates}) => {
+let AdvocateContainer = ({advocates, totalAdvocates, showMore, showLess}) => {
   return (
     <div>
       <MuiThemeProvider>
         <div style={styling.container}>
         <Options totalAdvocates={totalAdvocates} />
-        < Advocates advocates={advocates} />
+        < Advocates advocates={advocates} showMore={showMore} showLess={showLess} />
         <div style={styling.advocatesStyling}> {totalAdvocates + " Advocates Found"} </div>
         <Bottom />
         </div>
@@ -52,7 +53,14 @@ let mapStateToProps = (state) => {
 };
 
 let mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    showMore: function (advocateIndex) {
+      dispatch(actions.showMoreBio(advocateIndex));
+    },
+    showLess: function (advocateIndex) {
+      dispatch(actions.showLessBio(advocateIndex));
+    }
+  };
 }
 
 AdvocateContainer = connect(mapStateToProps, mapDispatchToProps)(AdvocateContainer);

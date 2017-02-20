@@ -18,14 +18,26 @@ let style = {
   }
 }
 
-let Advocates = ({advocates}) => {
+function show(showFullBio, index) {
+  return function () {
+    showFullBio(index)
+  }
+}
+function hide(showLess, index) {
+  return function () {
+    showLess(index)
+  }
+}
+
+
+let Advocates = ({advocates, showMore, showLess}) => {
 
   return (
     <div style={style.container}>
       <table style={style.table}>
         <tbody>
           {
-            advocates.map((advocate) => <tr><td style={style.column}><People advocate={advocate}/></td></tr>)
+            advocates.map((advocate, i) => <tr onMouseEnter={show(showMore, i)} onMouseLeave={hide(showLess, i)}><td style={style.column}><People key={i} advocate={advocate} /></td></tr>)
           }
         </tbody>
       </table>

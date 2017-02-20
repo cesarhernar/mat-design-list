@@ -8,3 +8,10 @@
   font-family: Roboto, sans-serif;
   border: 4px solid #D8D8D8
 }
+.abouthide{
+  visibility: hidden;
+}
+
+.aboutshow{
+  visibility: show;
+}

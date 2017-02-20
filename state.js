@@ -8,21 +8,25 @@ let initialState = {
       position: "COO & Co-Founder",
       reviews: 55,
       rating: 4.5,
-      about: "Purple Squirrel levels the playing field for people who don't have a great professional network in a ...",
+      showFullBio: false,
+      aboutFirstHalf: "Purple Squirrel levels the playing field for people who don't have a great professional network in a ",
+      aboutSecondHalf: "job market where \"it's all about who you know\".  Feel free to book an engagement with me if you have any questions about how we can help you or if you'd just like to take Purple Squirrel for a test drive.",
       available: {
         fee: "Free",
         time: "30 min"
       }
     },
       {
-      name: "Jon S.",  
+      name: "Jon S.",
       company: "Purple Squirrel",
       logo: "https://media.purplesquirrel.io/companypictures/bc628043-7b2f-45a7-91bd-538f8c67b4bf.png",
       headshot: "https://s3-us-west-2.amazonaws.com/psq2-media/prod/profilepictures/c9d1c887-9649-46c5-865f-c3e2b7868046.jpg",
       position: "Strategy & Consulting",
       reviews: 54,
       rating: 4.5,
-      about: "My name is Jon Silber and I'm the CEO and co-founder of Purple Squirrel. Thanks for joining our ...",
+      showFullBio: false,
+      aboutFirstHalf: "My name is Jon Silber and I'm the CEO and co-founder of Purple Squirrel. Thanks for joining our ",
+      aboutSecondHalf: "job market where \"it's all about who you know\".  Feel free to book an engagement with me if you have any questions about how we can help you or if you'd just like to take Purple Squirrel for a test drive.",
       available: {
         fee: "Free",
         time: "30 min"
@@ -36,7 +40,9 @@ let initialState = {
       position: "COO & Co-Founder",
       reviews: undefined,
       rating: undefined,
-      about: "I've been in sales/account management at Forrester for more than five years. I manage emerging ...",
+      showFullBio: false,
+      aboutFirstHalf: "I've been in sales/account management at Forrester for more than five years. I manage emerging ",
+      aboutSecondHalf: "technology vendor accounts (<50 M – 1B in revenue). Work closely with CEO's, CMO's, and Product Marketing Managers to leverage Forrester's research, advisory, and consulting services.",
       available: {
         fee: "$5",
         time: "30 min"
@@ -50,7 +56,9 @@ let initialState = {
       position: "Sales",
       reviews: 3,
       rating: 5,
-      about: "I've been working in the enterprise division at Salesforce for over a year and have already referred ...",
+      showFullBio: false,
+      aboutFirstHalf: "I've been working in the enterprise division at Salesforce for over a year and have already referred ",
+      aboutSecondHalf: "others into the sales organization and other departments. I have helped guide them through the interview process and provided coaching and recommendations based on my experience. Always happy to help other great candidates join the team!",
       available: {
         fee: "$20",
         time: "30 min"
@@ -64,7 +72,9 @@ let initialState = {
       position: "Finance & Accounting",
       reviews: 1,
       rating: 5,
-      about: "I’ve was the manager of Business Operations - Platform & New Revenue Initiatives at Facebook for 3 ... ",
+      showFullBio: false,
+      aboutFirstHalf: "I’ve was the manager of Business Operations - Platform & New Revenue Initiatives at Facebook for 3 ",
+      aboutSecondHalf: "years and was on Google’s Global Business Strategy team before that (and functioned as an investor and investment banker prior to that).  I'm happy to share my experience working at Facebook and Google, provide resume critiques, interview advice, and introductions to former colleagues. ",
       available: {
         fee: "$40",
         time: "30 min"
@@ -78,7 +88,9 @@ let initialState = {
       position: "Sales",
       reviews: 1,
       rating: 5,
-      about: "OneLogin is a great place to work, builds a great product, and business is booming! Last quarter was ... ",
+      showFullBio: false,
+      aboutFirstHalf: "OneLogin is a great place to work, builds a great product, and business is booming! Last quarter was ",
+      aboutSecondHalf: `the strongest quarter in the company's history. I work with exceptionally talented people in a highly collaborative environment. The company treats its employees very well, with lots of great perks (good benefits, free lunches, lots of social activities) and a very open management team that's transparent about the direction of the company. As someone who was referred into the company, I am happy to offer the same help to other qualified job seekers looking to get their foot in the door.`,
       available: {
         fee: "$1",
         time: "30 min"
@@ -92,7 +104,9 @@ let initialState = {
       position: "Operations Manager",
       reviews: undefined,
       rating: undefined,
-      about: "",
+      showFullBio: false,
+      aboutFirstHalf: "",
+      aboutSecondHalf: "",
       available: {
         fee: "$20",
         time: "30 min"
@@ -106,7 +120,9 @@ let initialState = {
       position: "Strategy & Consulting",
       reviews: undefined,
       rating: undefined,
-      about: "I've been working as a Senior Associate for NY based Hedge Funds and have referred others into the ... ",
+      showFullBio: false,
+      aboutFirstHalf: "I've been working as a Senior Associate for NY based Hedge Funds and have referred others into the ",
+      aboutSecondHalf: "company. I have helped guide them through the interview process and am always happy to help great candidates join our team.",
       available: {
         fee: "$20",
         time: "30 min"
@@ -120,7 +136,9 @@ let initialState = {
       position: "Strategy & Consulting",
       reviews: undefined,
       rating: undefined,
-      about: "My name is Adam LaPlaca and I've worked with GLG for a little over a year now. I recently graduated ... ",
+      showFullBio: false,
+      aboutFirstHalf: "My name is Adam LaPlaca and I've worked with GLG for a little over a year now. I recently graduated ",
+      aboutSecondHalf: `and went through the job application process during my senior year. I can help you to better understand how GLG differentiates itself and how you should think about differentiating yourself through your GLG interviews.`,
       available: {
         fee: "$20",
         time: "30 min"
